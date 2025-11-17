@@ -1,0 +1,22 @@
+seed: 42
+
+data:
+  batch_size: 64
+  num_workers: 2
+  root: "data"        # torchvision will create data/MNIST/raw etc.
+
+model:
+  name: "lenet_mnist"
+  num_classes: 10
+
+train:
+  epochs: 3
+  lr: 0.001
+
+device: "cuda"        # "cuda" or "cpu"
+
+outputs:
+  artifacts_dir: "artifacts"
+  reports_dir: "outputs"
+  model_filename: "lenet_mnist.pt"
+  metrics_filename: "metrics.txt"
